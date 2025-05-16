@@ -10,7 +10,7 @@
 - ✨ Fluent API for chaining logic
 - 🔁 Supports both sync and async flows
 - 🔍 `tap` for debugging or side effects
-- 🔄 `step`, `asyncStep`, `map`, and `await` for maximum clarity
+- 🔄 `step`, `asyncStep`, `map`, and `then` for maximum clarity
 - 🪶 Lightweight and TypeScript-native
 
 ## 📦 Installation
