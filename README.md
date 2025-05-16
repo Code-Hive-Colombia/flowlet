@@ -39,7 +39,7 @@ const result = await Flow.start({ user: "admin" })
   .step(encryptPassword)
   .tap(({ token }) => console.log("Token:", token))
   .asyncStep(writeLog)
-  .await((pipe) => pipe.step(({ token }) => ({ body: token })));
+  .then((pipe) => pipe.step(({ token }) => ({ body: token })));
 
 console.log("Response:", result.end());
 ```
@@ -51,7 +51,7 @@ console.log("Response:", result.end());
 | `Flow.start(data)` | Starts a new flow with the given context.                          | `Flow<T>`          |
 | `.step(fn)`        | Applies a synchronous transformation to the flow context.          | `Flow<U>`          |
 | `.asyncStep(fn)`   | Applies an asynchronous transformation to the flow context.        | `AsyncFlow<U>`     |
-| `.await(fn)`       | Resumes the flow after an async step. Receives a new `Flow`.       | `Promise<Flow<U>>` |
+| `.then(fn)`        | Resumes the flow after an async step. Receives a new `Flow`.       | `Promise<Flow<U>>` |
 | `.tap(fn)`         | Runs a side-effect or debug function without altering the context. | `Flow<T>`          |
 | `.end()`           | Returns the final resolved context from the flow.                  | `T`                |
 
