@@ -4,7 +4,7 @@
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "type": "module",
-  "version": "1.0.0",
+  "version": "1.2.0",
   "description": "A lightweight utility for building fluent, composable data flows. It supports both synchronous and asynchronous steps, with clear semantics and a minimal API",
   "scripts": {
     "build": "bun build --target=node ./src/index.ts --outfile=dist/index.js && bun run build:declaration",
